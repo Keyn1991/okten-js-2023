@@ -1,50 +1,142 @@
-// - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
-//     Вивести кожну змінну за допомогою: console.log
+// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 
-const hs = 'hello';
-const hso = 'owu';
-const hsc = 'com';
-const hsu = 'ua';
+for (let i = 1; i < 11; i++) {
+    document.write(`<div>hello</div>`)
+}
 
-const no = 1;
-const nt = 10;
-const nn = -999;
-const not = 123;
-const PI = 3.14;
-const nts = 2.7;
-const ns = 16;
+// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 
-const bool1 = true;
-const bool2 = false;
+for (let i = 1; i < 11; i++) {
+    document.write(`<div>${i}.Name <div/>`)
+}
+// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 
-console.log(hs, hso, hsc, hsu, no, nt, nn, not, PI, nts, ns, bool1, bool2);
+let i = 1;
+while (i < 21) {
+    document.write(`<h1>I'm a while loop</h1>`)
+    i++
+}
+// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+let i1 = 1;
+while (i1 < 21) {
+    document.write(`<div><h1>${i1}. I'm a while loop</h1></div>`)
+    i1++
+}
+// - Використовуючи данні з масиву, за допомоги document.write та циклу
+// побудувати структуру по шаблону
+// Масив:
 
-// - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
+    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 
-const firstName = 'Potapchuk';
-const middleName = "Dmytro";
-const lastName ='Volodymyrovych';
+document.write(`<ul>`);
 
-// const person = firstName +' '+ middleName + ' ' + lastName  \ інтерполяція
+for (const listOfItem of listOfItems) {
+    document.write(`<li>${listOfItem}</li>`)
 
-const person = `${firstName} ${middleName} ${lastName}`;
-console.log(person);
+}
+document.write(`</ul>`);
+//
+// ШАБЛОН:
+//     <ul>
+//         <li>ITEM OF ARRAY</li>
+//         <!--
+//             і тд інші об'єкти масиву
+//              ...
+//              ...
+//              ...
+//         -->
+//     </ul>
+//
+// замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
+//
+// -----------------------------------------------
+//
+//     Використовуючи данні з масиву, за допомоги document.write та циклу
+// побудувати структуру по шаблону
+// Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
+//
+let products = [
+    {
+        title: 'milk',
+        price: 22,
+        image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    },
+    {
+        title: 'juice',
+        price: 27,
+        image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    },
+    {
+        title: 'tomato',
+        price: 47,
+        image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    },
+    {
+        title: 'tea',
+        price: 15,
+        image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+    },
+];
+for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    document.write(`<div class="product-card">
+    <h3>${product.title} --- ${product.price}</h3>
+    <img src="${product.image}" alt="image-product">
+</div>`)
+}
 
-// - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
 
-let a = 100; let b = '100'; let c = true;
+// ШАБЛОН
+// <div className="product-card">
+//     <h3 class="product-title">TITLE. Price - PRICE</h3>
+// <img src="IMAGE" alt="" class="product-image">
+// </div>
+// Замість TITLE PRICE IMAGE - підставити відповідні поля з об'єкту
+//
+//
+//
+// --------------------
+//     є масив
+let users = [
+    {name: 'vasya', age: 31, status: false},
+    {name: 'petya', age: 30, status: true},
+    {name: 'kolya', age: 29, status: true},
+    {name: 'olya', age: 28, status: false},
+    {name: 'max', age: 30, status: true},
+    {name: 'anya', age: 31, status: false},
+    {name: 'oleg', age: 28, status: false},
+    {name: 'andrey', age: 29, status: true},
+    {name: 'masha', age: 30, status: true},
+    {name: 'olya', age: 31, status: false},
+    {name: 'max', age: 31, status: true}
+];
 
-console.log(typeof a);
-console.log(typeof b);
-console.log(typeof c);
+// за допомоги циклу вивести:
+//     - користувачів зі статусом true
 
-// Додаткове для тих хто цікавився prompt`oм
-// - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
+                //for of
+for (const user of users) {
+    if (user.status === true) {
+        document.write(`<h3>${user.name}</h3>` )
+    }
 
-let name = prompt("Введіть ваше ім'я:");
-let patronymic = prompt("Введіть ваше по-батькові:");
-let age = prompt("Введіть ваш вік:");
+}
 
-console.log(`ім'я: ${name}`);
-console.log(`по-батькові: ${patronymic}`);
-console.log(`Вік: ${age}`);
+// - користувачів зі статусом false
+                //for
+for (let j = 0; j < users.length; j++) {
+    const user = users[j];
+    if (user.status !== true) {
+        document.write(`<h4>${user.name}</h4>` )
+    }
+}
+// - користувачів які старші за 30 років
+            //for in
+for (const usersKey in users) {
+    if (users[usersKey].age > 30) {
+        document.write(`<h2>${users[usersKey].name }</h2>`
+        )
+    }
+}
+
+
