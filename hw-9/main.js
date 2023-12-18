@@ -73,7 +73,7 @@ let coursesAndDurationArray = [
 // const coursesContainer = document.createElement('div');
 // coursesContainer.id = 'coursesContainer';
 //
-// document.body.appendChild(coursesContainer); // Append to body, or choose another existing element
+// document.body.appendChild(coursesContainer);
 //
 // for (const course of coursesAndDurationArray) {
 //     const itemDiv = document.createElement('div');
