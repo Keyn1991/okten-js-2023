@@ -1,34 +1,79 @@
-.courses-container {
-    display: flex;
-    flex-direction: column;
+.div-form form {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.div-form input[type="text"],
+.div-form input[type="number"] {
     width: 100%;
-
-}
-
-.course-block {
-    border: 1px solid #000;
-    margin: 10px;
+    margin: 5px 0;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.title-block {
-    font-size: 1.2em;
+.div-form button[type="submit"] {
+    display: block;
+    width: 108%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.div-form .result {
+    text-align: center;
+    margin-top: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
-.duration-block {
-    font-size: 1em;
+
+.session-info {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+
+.counter {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
     margin-bottom: 10px;
 }
-
-.modules-block ul {
-    list-style-type: none;
-    padding: 0;
+.history {
+    text-align: center;
 }
 
-.modules-block li {
-    background-color: #f0f0f0;
-    margin-bottom: 2px;
-    padding: 5px;
+.session-info {
+    font-size: 16px;
+    color: green;
+    margin-top: 10px;
+}
+
+.prev-btn, .next-btn, .checkAgeButton{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.marg {
+margin: 15px;
+
+}
+
+.priceContainer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
 }

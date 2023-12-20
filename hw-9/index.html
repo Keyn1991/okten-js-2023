@@ -6,9 +6,60 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>hw-9</title>
+    <title>hw-10</title>
 </head>
 <body>
+
+<div class="div-form">
+
+    <form action="" name="f1">
+        <input type="text" placeholder="name" name="username">
+        <input type="text" placeholder="surname" name="surname">
+        <input type="number" placeholder="age" name="age">
+        <button type="submit" value="typ btn save">send data</button>
+    </form>
+
+    <div class="result"></div>
+
+    <div class="history">
+
+        <h1>Session History</h1>
+        <div class="counter">0</div>
+        <div class="session-info"></div>
+
+        <div id="objects-list"></div>
+        <div id="sessionContainer"></div>
+        <button class="prev-btn" onclick="prevObjects()">Prev</button>
+        <button class="next-btn" onclick="nextObjects()">Next</button>
+
+        <div class="marg">
+
+        <div id="text">Це текстовий елемент.</div>
+        <button class="prev-btn" id="hideButton">Приховати текст</button>
+
+    <form class="age-form">
+        <label for="ageInput">Введіть ваш вік:</label>
+        <input type="number" id="ageInput" name="age">
+        <button type="submit">Перевірити вік</button>
+    </form>
+
+    </div>
+
+        </div>
+
+    <div class="additional">
+        <form class="tableForm">
+            <h1>additional-task</h1>
+            <input type="number" class="rowCount" placeholder="Кількість рядків">
+            <input type="number" class="cellCount" placeholder="Кількість ячейок">
+            <input type="text" class="cellContent" placeholder="Вміст ячейок">
+            <button type="submit">Створити таблицю</button>
+        </form>
+        <div class="tableContainer"></div>
+        <div class="priceContainer">100грн</div>
+</div>
+
+</div>
 
 <script src="main.js"></script>
 
